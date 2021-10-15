@@ -1,4 +1,4 @@
-### Enable WireGuard to secure on-the-wire, in-cluster pod traffic in a Calico cluster.
+### Enable WireGuard to secure on-the-wire, in-cluster pod traffic in a Kubernetes cluster with Calico networking.
 
 1) **Install and setup krew on your machine**
     
