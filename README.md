@@ -4,8 +4,9 @@
     
     `https://krew.sigs.k8s.io/docs/user-guide/setup/install/`
     
-2) **Install ksniff **     
-    install ksniff using the kubectl plugin package manager, krew:
+2) **Install ksniff**
+     
+    Install ksniff using the kubectl plugin package manager, krew:
     
     `$ kubectl krew install sniff`
     
