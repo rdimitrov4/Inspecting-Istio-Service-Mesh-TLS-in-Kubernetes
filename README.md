@@ -118,6 +118,25 @@
     
     In the above CLI output, you should see all of the tcpdump configuration, and if all goes well, Wireshark should launch
     
+    I can see all traffic going in and out of the pod.
+    If I use the guestbook frontend and make an input the request is easly traceable:
     
+    ![Before-Wireguard](https://github.com/rdimitrov4/Inspecting-pod-traffic-before-and-after-Calico-Wireguard-implementation/blob/main/wireshark-before-wireguard.png?raw=true)
     
-5)****
+5) **Enabling Wireguard on the Kubernetes cluster with Calico networking**
+
+    After meeting the prerequisites for Calico's Wireguard feature we can enable it using the following command
+    
+    `calicoctl patch felixconfiguration default --type='merge' -p '{"spec":{"wireguardEnabled":true}}'`
+    
+    And confirm that the feature is on by looking at the node's configuration:
+    
+    ```
+       $ calicoctl get node <NODE-NAME> -o yaml
+       
+       status:
+        ..
+       wireguardPublicKey: jlkVyQYooZYzI2wFfNhSZez5eWh44yfq1wKVjLvSXgY=
+
+    ```
+    
