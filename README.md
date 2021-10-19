@@ -122,7 +122,7 @@
     
 5) **Installing Istio Service Mesh on the Kubernetes cluster to enable TLS encryption**
 
-    After meeting the prerequisites for Istio and making the necessary platform setup we can Install Istion on our K8S cluster following the official documentation
+    After meeting the prerequisites for Istio and making the necessary platform setup we can Install Istio on our K8S cluster following the official documentation
     `https://istio.io/latest/docs/setup/`
     
    After doing so and labeling our default namespace with the `istio-injection=enabled` lable we are ready to go.
