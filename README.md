@@ -139,4 +139,8 @@
     
    After doing so and labeling our default namespace with the `istio-injection=enabled` lable we are ready to go.
    
+   Istio injects an Envoy sidecar in each pod to establish secure TLS communication between pods. The Envoy container is used to collect metrics and other input/output data.
    
+   When trying to establish ksniff on the guestbook pod we will notice that the pod now has two containers - one for the geustbook service and one for the Istio-managed Envoy Sidecar
+      
+   Describe the pod and get the sidecar container's ID so we can attach ksniff to it
