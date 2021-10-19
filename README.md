@@ -120,6 +120,18 @@
     I can see all traffic going in and out of the pod.
     
     
+    Inspecting the HTTP traffic after I make a request in the guestbook go I can see that the source IP of my requests is the internal node IP I currently have (10.250.11.207) and the destination is 100.96.0.19 (The container's eth0 IP address). We can see that the source port is 3000 (request coming from the browoser, that's the open port to external http requests)
+    
+    ![screen1](https://github.com/rdimitrov4/Inspecting-Service-Mesh-TLS-in-Kubernetes/blob/main/screen1.png?raw=true)
+    `Node IP`
+    
+    ![screen2](https://github.com/rdimitrov4/Inspecting-Service-Mesh-TLS-in-Kubernetes/blob/main/screen2.png?raw=true)
+    `Container IP`
+    
+    ![screen3](https://github.com/rdimitrov4/Inspecting-Service-Mesh-TLS-in-Kubernetes/blob/main/screen3.png?raw=true)
+    `Wireshark on the Pod`
+    
+    
 5) **Installing Istio Service Mesh on the Kubernetes cluster to enable TLS encryption**
 
     After meeting the prerequisites for Istio and making the necessary platform setup we can Install Istio on our K8S cluster following the official documentation
