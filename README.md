@@ -152,5 +152,4 @@
    ![screen4](https://github.com/rdimitrov4/Inspecting-Service-Mesh-TLS-in-Kubernetes/blob/main/screen4.png?raw=true)
    
    This works between containers because all containers within a Pod share a network namespace.
-   
-   
+   A series of other packets that use the TLSv1.2 protocol that contain the unreadable encrypted data.
