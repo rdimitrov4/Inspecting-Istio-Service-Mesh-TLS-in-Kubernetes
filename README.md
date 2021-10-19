@@ -143,4 +143,14 @@
    
    When trying to establish ksniff on the guestbook pod we will notice that the pod now has two containers - one for the geustbook service and one for the Istio-managed Envoy Sidecar
       
-   Describe the pod and get the sidecar container's ID so we can attach ksniff to it
+   Describe the pod and get the sidecar container's ID so we can attach ksniff to it:
+   
+   `kubectl sniff guestbook-k9rmc -n default -c istio-proxy`
+   
+   Everything looks quite similar to the previous example, except note the source and destination IP addresses: they are both 127.0.0.1. What we are seeing here is the unencrypted traffic between the Istio Envoy sidecar and the guestbook service, which are communicating over the Pod’s localhost loopback adapter. The packets go through from the node's IP to the pod's internal IP then to the container via the Envoy Proxy.
+   
+   ![screen4](https://github.com/rdimitrov4/Inspecting-Service-Mesh-TLS-in-Kubernetes/blob/main/screen4.png?raw=true)
+   
+   This works between containers because all containers within a Pod share a network namespace.
+   
+   
