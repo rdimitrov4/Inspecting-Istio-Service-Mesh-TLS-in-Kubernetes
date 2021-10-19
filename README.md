@@ -1,4 +1,4 @@
-### Enable WireGuard to secure on-the-wire, in-cluster pod traffic in a Kubernetes cluster with Calico networking.
+### ksniff — all the goodness of Wireshark, running in Kubernetes.
 
 1) **Install and setup krew on your machine**
     
